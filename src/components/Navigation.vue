@@ -7,7 +7,7 @@ const { t } = useI18n()
 const route = useRoute()
 
 const routes = getRoutes()
-	.filter((r) => !r.path.includes('notFound'))
+	.filter((r) => !r.path.includes('404'))
 	.map((r) => {
 		let { path, name } = r
 		if (path === '/') {

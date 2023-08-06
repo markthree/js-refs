@@ -8,17 +8,11 @@ const typedRef = useTyped([' is not found!'])
 			<div class="code text-7xl">404</div>
 			<div ref="typedRef" class="content mb-5 text-3xl">The Page</div>
 			<RouterLink to="/">
-				<button
-					class="rounded bg-light-800 px-5 py-2 text-lg transition"
-					hover="shadow-md"
-					dark="text-black"
-				>
-					Go Home
-				</button>
+				<NButton size="large" strong secondary> Go Home </NButton>
 			</RouterLink>
 		</div>
 
-		<img src="/notFound/32.svg" class="cover" alt="page not found" />
+		<img src="/notFound/30.svg" class="cover" alt="page not found" />
 	</div>
 </template>
 
