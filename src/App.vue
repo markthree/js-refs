@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { naiveTheme } from 'vue-dark-switch'
+</script>
+
 <template>
-	<router-view />
+	<NConfigProvider :theme="naiveTheme">
+		<RouterView />
+	</NConfigProvider>
 </template>

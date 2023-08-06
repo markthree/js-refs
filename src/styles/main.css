@@ -1,10 +1,5 @@
 @import './md.css';
 
-
-html.dark {
-	background: #100c2a !important;
-}
-
 .prose {
 	scroll-behavior: smooth;
 }

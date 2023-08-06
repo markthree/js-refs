@@ -1,12 +1,6 @@
 # About
 
-> The page is markdown file
 
-```js
-console.log("hello");
-```
-
-<br />
-
-<!-- 支持嵌入组件 -->
-<Counter />
+<NAlert type="info">
+js 社区库索引，可以让你更方便地查找 js 系的仓库
+</NAlert>

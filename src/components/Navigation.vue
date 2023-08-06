@@ -4,6 +4,8 @@ import { SwitchIcon } from 'vue-dark-switch'
 
 const { t } = useI18n()
 
+const route = useRoute()
+
 const routes = getRoutes()
 	.filter((r) => !r.path.includes('notFound'))
 	.map((r) => {
@@ -31,7 +33,12 @@ const routes = getRoutes()
 
 		<ul class="flex items-center gap-2 text-sm font-medium">
 			<li v-for="r of routes" :key="r.path" class="hidden !block">
-				<RouterLink class="rounded-lg px-3 py-2" :to="r.path">
+				<RouterLink
+					class="rounded-lg px-3 py-2 uppercase"
+					dark="text-white hover:text-blue-500"
+					:class="route.path === r.path ? '!text-blue-500' : null"
+					:to="r.path"
+				>
 					{{ t(r.name) }}
 				</RouterLink>
 			</li>
@@ -39,7 +46,8 @@ const routes = getRoutes()
 			<li>
 				<a
 					class="inline-flex items-center gap-2 rounded-lg px-3 py-2"
-					href="https://github.com/dishait/tov-template"
+					href="https://github.com/markthree/js-refs"
+					dark="text-white hover:text-blue-500"
 					target="_blank"
 				>
 					<svg
