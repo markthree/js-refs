@@ -10,7 +10,7 @@
   "files.associations": {
     "*.css": "css"
   },
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "css.lint.unknownAtRules": "ignore",
   // 开启 eslint
   "eslint.enable": true,
@@ -35,7 +35,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
