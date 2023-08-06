@@ -1,6 +1,18 @@
 <script setup lang="tsx">
 import type { RowData } from '~/type'
-import { NSpace, type DataTableColumns, NTag, NEllipsis } from 'naive-ui'
+import {
+	NTag,
+	NSpace,
+	NEllipsis,
+	NGradientText,
+	NNumberAnimation,
+	type DataTableColumns,
+} from 'naive-ui'
+
+const props = defineProps<{
+	data: RowData[]
+	loading?: boolean
+}>()
 
 const points = {
 	Unified: (
@@ -47,7 +59,16 @@ const runtimes = {
 
 const columns: DataTableColumns<RowData> = [
 	{
-		title: '仓库名',
+		title() {
+			return (
+				<NSpace justify="space-between">
+					<div>仓库名</div>
+					<NGradientText size="16" type="success">
+						<NNumberAnimation from={0} show-separator to={props.data.length} />
+					</NGradientText>
+				</NSpace>
+			)
+		},
 		key: '仓库名',
 		render(rowData) {
 			return <div class="text-md font-semibold">{rowData.data['仓库名']}</div>
@@ -130,11 +151,6 @@ const columns: DataTableColumns<RowData> = [
 		},
 	},
 ]
-
-defineProps<{
-	data: RowData[]
-	loading?: boolean
-}>()
 </script>
 
 <template>
