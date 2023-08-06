@@ -1,4 +1,5 @@
 <template>
+	<img src="/logo.svg" alt="logo" class="fixed left-8 top-6 rounded" />
 	<Navigation />
 	<div class="w-screen flex flex-col items-center justify-center">
 		<router-view v-slot="{ Component }">
