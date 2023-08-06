@@ -1,6 +1,6 @@
 <script setup lang="tsx">
 import type { RowData } from '~/type'
-import { NSpace, type DataTableColumns, NEllipsis, NTag } from 'naive-ui'
+import { NSpace, type DataTableColumns, NTag, NEllipsis } from 'naive-ui'
 
 const points = {
 	Unified: (
@@ -50,16 +50,18 @@ const columns: DataTableColumns<RowData> = [
 		title: '仓库名',
 		key: '仓库名',
 		render(rowData) {
-			return <div>{rowData.data['仓库名']}</div>
+			return <div class="text-md font-semibold">{rowData.data['仓库名']}</div>
 		},
 	},
 	{
 		title: '描述',
 		key: '描述',
-		width: '260',
+		width: '280',
 		render(rowData) {
 			return (
-				<NEllipsis style="max-width: 240px">{rowData.data['描述']}</NEllipsis>
+				<NEllipsis class="text-gray-700 dark:text-gray-300">
+					{rowData.data['描述']}
+				</NEllipsis>
 			)
 		},
 	},
@@ -74,7 +76,7 @@ const columns: DataTableColumns<RowData> = [
 					href={rowData.data['链接']}
 					target="__blank"
 				>
-					<NEllipsis style="max-width: 240px">{rowData.data['链接']}</NEllipsis>
+					<NEllipsis>{rowData.data['链接']}</NEllipsis>
 				</a>
 			)
 		},
@@ -82,7 +84,7 @@ const columns: DataTableColumns<RowData> = [
 	{
 		title: '端',
 		key: '端',
-
+		align: 'center',
 		render(rowData) {
 			return points[rowData.data['端']]
 		},
@@ -90,6 +92,7 @@ const columns: DataTableColumns<RowData> = [
 	{
 		title: '类型',
 		key: '类型',
+		align: 'center',
 		render(rowData) {
 			return types[rowData.data['类型']]
 		},
@@ -97,12 +100,13 @@ const columns: DataTableColumns<RowData> = [
 	{
 		title: '框架',
 		key: '框架',
+		align: 'center',
 		render(rowData) {
 			if (!rowData.data['框架']) {
 				return null
 			}
 			return (
-				<NSpace>
+				<NSpace justify="center">
 					{rowData.data['框架'].map((v) => (
 						<div>{v}</div>
 					))}
@@ -113,11 +117,16 @@ const columns: DataTableColumns<RowData> = [
 	{
 		title: '运行时',
 		key: '运行时',
+		align: 'center',
 		render(rowData) {
 			if (!rowData.data['运行时']) {
 				return null
 			}
-			return <NSpace>{rowData.data['运行时'].map((v) => runtimes[v])}</NSpace>
+			return (
+				<NSpace justify="center">
+					{rowData.data['运行时'].map((v) => runtimes[v])}
+				</NSpace>
+			)
 		},
 	},
 ]
@@ -131,6 +140,8 @@ defineProps<{
 <template>
 	<NDataTable
 		:columns="columns"
+		:bordered="false"
+		:single-line="false"
 		:data="data"
 		:max-height="500"
 		virtual-scroll
