@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { RowData } from '~/type'
+import { defineAsyncComponent } from 'vue'
 
 const { t } = useI18n()
 
@@ -13,6 +14,8 @@ const normalizeData = computed(() => {
 })
 
 const { key, result } = useSearch(normalizeData, ['data.描述', 'data.仓库名'])
+
+const Table = defineAsyncComponent(() => import('@/components/Table.vue'))
 </script>
 
 <template>
@@ -33,6 +36,11 @@ const { key, result } = useSearch(normalizeData, ['data.描述', 'data.仓库名
 				</NButton>
 			</NInputGroup>
 		</NSpace>
-		<Table class="p-8" :data="result" :loading="loading" />
+		<Suspense>
+			<Table class="p-8" :data="result" :loading="loading" />
+			<template #fallback>
+				<NSpace justify="center" class="m-20"> 组件加载中... </NSpace>
+			</template>
+		</Suspense>
 	</div>
 </template>
