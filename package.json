@@ -54,6 +54,7 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-vue": "^9.16.1",
+    "fuse.js": "^6.6.2",
     "husky": "^8.0.3",
     "ityped": "^1.0.3",
     "lightningcss": "^1.21.5",

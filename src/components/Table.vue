@@ -1,13 +1,7 @@
 <script setup lang="tsx">
+import Total from './Total.vue'
 import type { RowData } from '~/type'
-import {
-	NTag,
-	NSpace,
-	NEllipsis,
-	NGradientText,
-	NNumberAnimation,
-	type DataTableColumns,
-} from 'naive-ui'
+import { NTag, NSpace, NEllipsis, type DataTableColumns } from 'naive-ui'
 
 const props = defineProps<{
 	data: RowData[]
@@ -63,9 +57,7 @@ const columns: DataTableColumns<RowData> = [
 			return (
 				<NSpace justify="space-between">
 					<div>仓库名</div>
-					<NGradientText size="16" type="success">
-						<NNumberAnimation from={0} show-separator to={props.data.length} />
-					</NGradientText>
+					<Total to={Number(props.data.length)} />
 				</NSpace>
 			)
 		},

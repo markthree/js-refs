@@ -11,13 +11,15 @@ const normalizeData = computed(() => {
 	}
 	return data.value as any as RowData[]
 })
+
+const { key, result } = useSearch(normalizeData, ['data.描述', 'data.仓库名'])
 </script>
 
 <template>
 	<div>
 		<NSpace justify="center">
 			<NInputGroup class="min-w-500px">
-				<NInput round :placeholder="t('placeholder')">
+				<NInput v-model:value="key" round :placeholder="t('placeholder')">
 					<template #prefix>
 						<NIcon>
 							<div class="i-ion:flash-outline"></div>
@@ -31,6 +33,6 @@ const normalizeData = computed(() => {
 				</NButton>
 			</NInputGroup>
 		</NSpace>
-		<Table class="p-8" :data="normalizeData" :loading="loading" />
+		<Table class="p-8" :data="result" :loading="loading" />
 	</div>
 </template>
