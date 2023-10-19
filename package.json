@@ -58,7 +58,7 @@
     "husky": "^8.0.3",
     "ityped": "^1.0.3",
     "lightningcss": "^1.21.5",
-    "lint-staged": "^13.2.3",
+    "lint-staged": "^15.0.2",
     "local-pkg": "^0.4.3",
     "markdown-it-prism": "^2.3.0",
     "mockjs": "^1.1.0",
