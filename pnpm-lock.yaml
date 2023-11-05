@@ -53,7 +53,7 @@ devDependencies:
     version: 10.3.0(vue@3.3.4)
   '@vueuse/integrations':
     specifier: ^10.3.0
-    version: 10.3.0(axios@1.4.0)(fuse.js@6.6.2)(nprogress@0.2.0)(vue@3.3.4)
+    version: 10.3.0(axios@1.4.0)(fuse.js@7.0.0)(nprogress@0.2.0)(vue@3.3.4)
   axios:
     specifier: ^1.4.0
     version: 1.4.0
@@ -85,8 +85,8 @@ devDependencies:
     specifier: ^9.16.1
     version: 9.16.1(eslint@8.46.0)
   fuse.js:
-    specifier: ^6.6.2
-    version: 6.6.2
+    specifier: ^7.0.0
+    version: 7.0.0
   husky:
     specifier: ^8.0.3
     version: 8.0.3
@@ -176,7 +176,7 @@ devDependencies:
     version: 1.4.5(vite@4.4.8)(vue@3.3.4)
   vite-plugin-vue-devtools:
     specifier: ^0.5.1
-    version: 0.5.1(@types/node@18.17.3)(axios@1.4.0)(fuse.js@6.6.2)(nprogress@0.2.0)(pug@3.0.2)(vite@4.4.8)(vue@3.3.4)
+    version: 0.5.1(@types/node@18.17.3)(axios@1.4.0)(fuse.js@7.0.0)(nprogress@0.2.0)(pug@3.0.2)(vite@4.4.8)(vue@3.3.4)
   vite-plugin-vue-markdown:
     specifier: ^0.23.7
     version: 0.23.7(vite@4.4.8)
@@ -3151,7 +3151,7 @@ packages:
       - vue
     dev: true
 
-  /@vueuse/integrations@10.3.0(axios@1.4.0)(fuse.js@6.6.2)(nprogress@0.2.0)(vue@3.3.4):
+  /@vueuse/integrations@10.3.0(axios@1.4.0)(fuse.js@7.0.0)(nprogress@0.2.0)(vue@3.3.4):
     resolution: {integrity: sha512-Jgiv7oFyIgC6BxmDtiyG/fxyGysIds00YaY7sefwbhCZ2/tjEx1W/1WcsISSJPNI30in28+HC2J4uuU8184ekg==}
     peerDependencies:
       async-validator: '*'
@@ -3195,7 +3195,7 @@ packages:
       '@vueuse/core': 10.3.0(vue@3.3.4)
       '@vueuse/shared': 10.3.0(vue@3.3.4)
       axios: 1.4.0
-      fuse.js: 6.6.2
+      fuse.js: 7.0.0
       nprogress: 0.2.0
       vue-demi: 0.14.5(vue@3.3.4)
     transitivePeerDependencies:
@@ -5078,8 +5078,8 @@ packages:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: true
 
-  /fuse.js@6.6.2:
-    resolution: {integrity: sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==}
+  /fuse.js@7.0.0:
+    resolution: {integrity: sha512-14F4hBIxqKvD4Zz/XjDc3y94mNZN6pRv3U13Udo0lNLCWRBUsrMv2xwcF/y/Z5sV6+FQW+/ow68cHpm4sunt8Q==}
     engines: {node: '>=10'}
     dev: true
 
@@ -5815,7 +5815,7 @@ packages:
       vanilla-jsoneditor: 0.17.8
       vue: 3.3.4
       vue-demi: 0.14.5(vue@3.3.4)
-      vue-global-config: 0.4.0(vue@3.3.4)
+      vue-global-config: 0.4.2(vue@3.3.4)
     dev: true
 
   /json-parse-even-better-errors@3.0.0:
@@ -8519,14 +8519,14 @@ packages:
       vue: 3.3.4
     dev: true
 
-  /vite-plugin-vue-devtools@0.5.1(@types/node@18.17.3)(axios@1.4.0)(fuse.js@6.6.2)(nprogress@0.2.0)(pug@3.0.2)(vite@4.4.8)(vue@3.3.4):
+  /vite-plugin-vue-devtools@0.5.1(@types/node@18.17.3)(axios@1.4.0)(fuse.js@7.0.0)(nprogress@0.2.0)(pug@3.0.2)(vite@4.4.8)(vue@3.3.4):
     resolution: {integrity: sha512-z6wzaRxvmQVF1A8iNPIrCrpgJWbFC8bQpCG18yTSHFzRYTkFrqTZ37JjrKysPP0EvLitI1PYru0Odqt2ICfCbQ==}
     engines: {node: '>=v14'}
     peerDependencies:
       vite: ^3.1.0 || ^4.0.0-0
     dependencies:
       '@vueuse/core': 10.3.0(vue@3.3.4)
-      '@vueuse/integrations': 10.3.0(axios@1.4.0)(fuse.js@6.6.2)(nprogress@0.2.0)(vue@3.3.4)
+      '@vueuse/integrations': 10.3.0(axios@1.4.0)(fuse.js@7.0.0)(nprogress@0.2.0)(vue@3.3.4)
       '@webfansplz/vuedoc-parser': 0.0.3(@types/node@18.17.3)(pug@3.0.2)
       algoliasearch: 4.19.1
       birpc: 0.2.12
@@ -8801,8 +8801,9 @@ packages:
       - supports-color
     dev: true
 
-  /vue-global-config@0.4.0(vue@3.3.4):
-    resolution: {integrity: sha512-UoFouTLUYGuHEEJFRgl29dzD0dDYtAEPRMDe8S0e08aB8vgfuD0ybW5WdPRTfTRChceHCn4eMQH2jFFVyi3Djw==}
+  /vue-global-config@0.4.2(vue@3.3.4):
+    resolution: {integrity: sha512-wqnawE5VIS9yhjSUmnb9O7Rb0cgSM+he96hOyZCs8HmtiERFRK+SrpMcS+bDOwSx6WoFF77+dNdibrQFDqiqEw==}
+    requiresBuild: true
     peerDependencies:
       '@vue/composition-api': '>=1'
       vue: 2||3
@@ -8810,8 +8811,6 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      change-case: 4.1.2
-      lodash-es: 4.17.21
       vue: 3.3.4
       vue-demi: 0.14.5(vue@3.3.4)
     dev: true
