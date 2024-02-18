@@ -39,7 +39,6 @@ import Modules from 'vite-plugin-use-modules'
 import VueDevTools from 'vite-plugin-vue-devtools'
 import Markdown from 'unplugin-vue-markdown/vite'
 import Layouts from 'vite-plugin-vue-meta-layouts'
-import { warmup as Warmup } from 'vite-plugin-warmup'
 
 import I18N from '@intlify/unplugin-vue-i18n/vite'
 import Legacy from '@vitejs/plugin-legacy'
@@ -67,10 +66,6 @@ export default function () {
 		}),
 		EnvTypes({
 			dts: 'presets/types/env.d.ts',
-		}),
-		// https://github.com/bluwy/vite-plugin-warmup (依赖预热，加快渲染，未来可能会内置到 vite 中)
-		Warmup({
-			clientFiles: ['./src/**/*'],
 		}),
 		// https://github.com/posva/unplugin-vue-router
 		Router({
