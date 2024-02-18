@@ -28,12 +28,15 @@ jobs:
         with:
           node-version: lts/*
 
+      - name: install pnpm
+        run: "npm i pnpm -g"
+
       - name: Build step
-        run: "npm install && npm run build" # 📝 Update the build command(s) if necessary
+        run: "pnpm install && pnpm run build" # 📝 Update the build command(s) if necessary
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "expensive-clam-98"
+          project: "js-refs"
           entrypoint: "https://deno.land/std@0.188.0/http/file_server.ts" # 📝 Update the entrypoint if necessary
           root: "dist" # 📝 Update the root if necessary
