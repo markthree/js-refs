@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { InputInst } from 'naive-ui'
 import type { RowData } from '~/type'
 import { defineAsyncComponent } from 'vue'
 
@@ -16,13 +17,29 @@ const normalizeData = computed(() => {
 const { key, result } = useSearch(normalizeData, ['data.描述', 'data.仓库名'])
 
 const Table = defineAsyncComponent(() => import('@/components/Table.vue'))
+
+const inputInstRef = ref<InputInst | null>(null)
+
+// 监听 ctrl + shift + f 搜索
+const { Ctrl, Shift, f } = useMagicKeys()
+whenever(
+	() => Ctrl.value && f.value && Shift.value,
+	() => {
+		inputInstRef.value?.focus()
+	},
+)
 </script>
 
 <template>
 	<div>
 		<NSpace justify="center">
 			<NInputGroup class="min-w-500px">
-				<NInput v-model:value="key" round :placeholder="t('placeholder')">
+				<NInput
+					ref="inputInstRef"
+					v-model:value="key"
+					round
+					:placeholder="t('placeholder')"
+				>
 					<template #prefix>
 						<NIcon>
 							<div class="i-ion:flash-outline"></div>
