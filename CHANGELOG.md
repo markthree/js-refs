@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/markthree/js-refs/compare/v0.0.2...v0.0.3)
+
+### 🏡 Chore
+
+- 更新 repository ([52fc8f7](https://github.com/markthree/js-refs/commit/52fc8f7))
+
+### ❤️ Contributors
+
+- Markthree ([@markthree](http://github.com/markthree))
+
 ## v0.0.2
 
 [compare changes](https://github.com/dishait/js-refs/compare/v0.0.1...v0.0.2)
