@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.2
+
+[compare changes](https://github.com/dishait/js-refs/compare/v0.0.1...v0.0.2)
+
+### 🏡 Chore
+
+- 更新 repository ([716cdb2](https://github.com/dishait/js-refs/commit/716cdb2))
+
+### ❤️ Contributors
+
+- Markthree ([@markthree](http://github.com/markthree))
+
 ## v0.0.1
 
 
