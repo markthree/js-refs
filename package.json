@@ -47,7 +47,7 @@
     "@vueuse/integrations": "^10.7.2",
     "axios": "^1.6.7",
     "browserslist": "^4.23.0",
-    "c8": "^9.1.0",
+    "c8": "^10.1.2",
     "changelogen": "^0.5.5",
     "cross-env": "^7.0.3",
     "echarts": "^5.5.0",
