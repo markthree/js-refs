@@ -34,7 +34,7 @@
     "@intlify/unplugin-vue-i18n": "^2.0.0",
     "@types/ityped": "^1.0.3",
     "@types/node": "^18.19.17",
-    "@typescript-eslint/parser": "^7.0.1",
+    "@typescript-eslint/parser": "^8.11.0",
     "@unocss/eslint-config": "^0.58.5",
     "@unocss/reset": "^0.58.5",
     "@unocss/transformer-directives": "^0.58.5",
